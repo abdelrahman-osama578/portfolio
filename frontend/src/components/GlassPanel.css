@@ -1,0 +1,16 @@
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* Subtle inner highlight to make the glass pop */
+  box-shadow: inset 0 1px 0 0 var(--glass-highlight);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 255, 204, 0.05), inset 0 1px 0 0 var(--glass-highlight);
+}

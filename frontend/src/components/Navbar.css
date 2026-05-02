@@ -1,0 +1,105 @@
+  .glass-navbar {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    height: 70px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px; /* Pill shape */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), inset 0 1px 0 0 var(--glass-highlight);
+  }
+
+/* --- PREMIUM EDITORIAL LOGO ("Italian Fashion" Style) --- */
+.nav-brand-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.nav-brand-container:hover {
+  opacity: 0.8;
+}
+
+/* The Italic Serif Monogram */
+.nav-logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', 'Didot', 'Bodoni MT', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2.2rem; 
+  line-height: 1;
+}
+
+/* The 'A' sits on top */
+.logo-a {
+  color: var(--text-primary);
+  z-index: 2;
+}
+
+/* The 'O' is slightly larger, glowing, and tucked behind the 'A' */
+.logo-o {
+  color: var(--accent-color);
+  margin-left: -12px; /* Forces the elegant overlapping ligature effect */
+  font-size: 2.5rem; 
+  text-shadow: 0 0 20px var(--accent-glow);
+  z-index: 1;
+}
+
+/* The Name Text - Separated by a clean, thin line */
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  padding-left: 16px;
+  border-left: 1px solid var(--glass-border); /* Subtle divider */
+}
+
+.brand-first {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.brand-last {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+  }
+
+  .nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links a:hover, .nav-links a.active {
+    color: var(--text-primary);
+    text-shadow: 0 0 12px var(--accent-glow);
+  }

@@ -1,0 +1,79 @@
+.faq-container {
+  padding: 32px;
+  width: 100%;
+  text-align: left;
+}
+
+.faq-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  color: var(--text-primary);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding-bottom: 12px;
+}
+
+/* Light mode border adjustment */
+html[data-theme='light'] .faq-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  padding: 12px 0;
+  transition: color 0.2s ease;
+}
+
+/* The subtle Gold to Cyan transition on hover */
+.faq-item:hover .faq-question {
+  color: var(--accent-color);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.2); /* Royal Gold shadow mixed with accent color */
+}
+
+.faq-icon {
+  color: var(--text-secondary);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-item:hover .faq-icon {
+  color: #d4af37; /* Royal Gold icon on hover */
+  transform: scale(1.1);
+}
+
+.faq-answer-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.faq-item.open .faq-answer-wrapper {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer {
+  overflow: hidden;
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  padding-right: 24px;
+}
+
+.faq-item.open .faq-answer {
+  padding-bottom: 12px;
+}
