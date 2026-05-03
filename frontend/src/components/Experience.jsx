@@ -1,8 +1,7 @@
-import React from 'react';
-import { Briefcase, GraduationCap, Calendar } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Briefcase, GraduationCap, Calendar, Award } from 'lucide-react';
 import GlassPanel from './GlassPanel';
 import './Experience.css';
-import { useEffect } from 'react';
 
 const Experience = () => {
   const experiences = [
@@ -28,6 +27,9 @@ const Experience = () => {
       role: "Bachelor of Computer Engineering",
       entity: "German University in Cairo (GUC)",
       date: "Expected Sep 2028",
+      // NEW: Added GPA and specific scale context
+      gpa: "1.42", 
+      gpaScale: "(German Scale: 0.7 is Highest / 4.0 is Passing)",
       description: "Focusing on robust system architecture, object-oriented programming, and advanced data structures."
     },
     {
@@ -36,6 +38,9 @@ const Experience = () => {
       role: "American Diploma",
       entity: "Dar Jana International Schools (DJIS)",
       date: "Graduated Jun 2023",
+      // NEW: Added GPA and specific scale context
+      gpa: "4.3", 
+      gpaScale: "(American Scale: 4.3 is Highest)",
       description: "Standardized Testing: SAT Score 1480/1600 (Math: 800)."
     }
   ];
@@ -68,7 +73,31 @@ const Experience = () => {
                   <Calendar size={14} /> {item.date}
                 </span>
               </div>
+              
               <h3 className="role">{item.role}</h3>
+
+              {/* NEW: The GPA Badge rendering logic */}
+              {item.gpa && (
+                <div style={{ 
+                  display: 'inline-flex', 
+                  alignItems: 'center', 
+                  gap: '8px', 
+                  background: 'rgba(0, 184, 255, 0.08)', 
+                  border: '1px solid rgba(0, 184, 255, 0.2)', 
+                  padding: '6px 12px', 
+                  borderRadius: '6px', 
+                  marginBottom: '16px' 
+                }}>
+                  <Award size={16} color="var(--accent-color)" />
+                  <span style={{ fontWeight: '700', color: 'var(--text-primary)', fontSize: '0.95rem' }}>
+                    GPA: <span style={{ color: 'var(--accent-color)' }}>{item.gpa}</span>
+                  </span>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                    {item.gpaScale}
+                  </span>
+                </div>
+              )}
+
               <p className="description">{item.description}</p>
             </GlassPanel>
           </div>

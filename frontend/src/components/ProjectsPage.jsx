@@ -46,7 +46,7 @@ const ProjectsPage = () => {
   };
 
   return (
-    <div style={{ paddingTop: '140px', paddingBottom: '4rem', maxWidth: '1200px', margin: '0 auto' }}>
+    <div style={{ paddingTop: '140px', paddingBottom: '4rem', maxWidth: '1000px', margin: '0 auto' }}>
       
       {/* Header & Filters */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '48px', flexWrap: 'wrap', gap: '24px' }}>

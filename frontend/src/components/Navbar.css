@@ -4,7 +4,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    max-width: 1200px;
+    max-width: 1000px;
     height: 70px;
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
