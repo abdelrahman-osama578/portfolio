@@ -38,7 +38,8 @@ app.use(express.json()); // Parses incoming JSON data from React
 const allowedOrigins = [
   'http://localhost:5173', 
   // We will update this string with your real domain after Vercel gives us one!
-  'https://portfolio-front-henna-omega.vercel.app' 
+  'https://portfolio-front-henna-omega.vercel.app' ,
+  'https://aossama.me'
 ];
 
 app.use(cors({
